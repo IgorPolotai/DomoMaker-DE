@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const handleError = (message) => {
   document.getElementById('errorMessage').textContent = message;
   document.getElementById('domoMessage').classList.remove('hidden');
@@ -29,4 +30,14 @@ const sendPost = async (url, data, handler) => {
   if (handler) {
     handler(result);
   }
+};
+
+const hideError = () => {
+  document.getElementById('domoMessage').classList.add('hidden');
+};
+
+module.exports = {
+  handleError,
+  sendPost,
+  hideError,
 };
