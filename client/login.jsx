@@ -27,7 +27,7 @@ const handleSignup = (e) => {
   const pass = e.target.querySelector('#pass').value;
   const pass2 = e.target.querySelector('#pass2').value;
 
-  if (!username || !pass || pass2) {
+  if (!username || !pass || !pass2) {
     helper.handleError('All fields are required!');
     return false;
   }
@@ -57,3 +57,45 @@ const LoginWindow = (props) => {
         </form>
     );
 };
+
+const SignupWindow = (props) => {
+    return (
+        <form id="signupForm"
+            name="signupForm"
+            onSubmit={handleSignup}
+            action="/signup"
+            method="POST"
+            className="mainForm">
+                <label htmlFor="username">Username: </label>
+                <input id="user" type="text" name="username" placeholder="username" />
+                <label htmlFor="pass">Password: </label>
+                <input id="pass" type="password" name="pass" placeholder="password" />
+                <label htmlFor="pass">Password: </label>
+                <input id="pass2" type="password" name="pass2" placeholder="retype password" />
+                <input className="formSubmit" type="submit" value="Sign up" />
+        </form>
+    );
+};
+
+const init = () => {
+    const loginButton = document.getElementById('loginButton');
+    const signupButton = document.getElementById('signupButton');
+
+    const root = createRoot(document.getElementById('content'));
+
+    loginButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        root.render(<LoginWindow />);
+        return false;
+    });
+
+    signupButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        root.render(<SignupWindow />);
+        return false;
+    });
+
+    root.render(<SignupWindow />);
+};
+
+window.onload = init;
