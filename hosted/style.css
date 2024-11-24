@@ -49,8 +49,8 @@ nav:nth-child(1) {
 
 .domoForm {
     border: 2px solid #338acc;
-    height: 35px;
-    width: 700px;
+    height: 135px;
+    width: 800px;
     margin-top:0px;
     padding-top:10px;
     background-color: #55acee;
@@ -64,6 +64,13 @@ nav:nth-child(1) {
     margin-left: 10px;
     font-size: 1.2em;
     float: left;
+    color: white;
+}
+
+.domoForm p {
+    width: 75px;
+    margin-left: 10px;
+    font-size: 1.2em;
     color: white;
 }
 
@@ -250,6 +257,15 @@ h3.domoName {
 h3.domoAge {
     float:right;
     text-align: left;
+    width: 100px;
+    font-weight: bold;
+    padding-right: 40px;
+    font-size: 1.5em;
+}
+
+h3.domoLevel {
+    float:center;
+    text-align: center;
     width: 100px;
     font-weight: bold;
     padding-right: 40px;
