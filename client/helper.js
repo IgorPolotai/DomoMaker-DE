@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
+/* eslint-disable linebreak-style */
 const handleError = (message) => {
   document.getElementById('errorMessage').textContent = message;
   document.getElementById('domoMessage').classList.remove('hidden');

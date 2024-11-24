@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable parsing-error */
 const React = require('react');
 const { createRoot } = require('react-dom/client');
 const helper = require('./helper.js');
